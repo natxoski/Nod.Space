@@ -1,0 +1,18 @@
+.jumbotron {
+    background: url('../img/tyler-van-der-hoeven-357415.jpg') no-repeat top;
+    background-size: 100%;
+    color: white;
+    text-align: center;
+}
+
+.jumbotron h1 {
+    color: #009688;
+    font-size: bold;
+}
+.jumbotron hr{
+    width:0;
+}
+
+#searchbox{
+    text-align:center;
+}

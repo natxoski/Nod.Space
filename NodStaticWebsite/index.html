@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang='es'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <title>
+        Nod.Space - Planets on the fly
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" href="./img/favicon-96x96.png">
+    <style>
+
+        .card-deck{
+            padding-bottom:20px;
+        }
+        .cards{
+            background: url('./img/nasa-45067.jpg') no-repeat center;
+            background-size: 100%;
+            margin-bottom:2px;
+        }
+
+
+
+        .jumbotron {
+            background: url('./img/tyler-van-der-hoeven-357415.jpg') no-repeat top;
+            background-size: 100%;
+            color: white;
+            text-align: center;
+        }
+
+        .jumbotron h1 {
+            color: crimson;
+        }
+        .jumbotron hr { width: 0;}
+
+        .jumbotron span { text-align:center;} 
+
+        footer{
+            color: white;
+            background-color: #333333;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class='container'>
+        <!-- HEADER-->
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+            <a class="navbar-brand" href="./index.html">Nod.Space</a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+               
+                    <ul class='navbar-nav mr-auto'>
+
+                        <li class='nav-item'><a class="nav-link" href="#latestdeals">Latest Deals</a></li>
+                        <li class='nav-item'><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                        <li class='nav-item'><a class="nav-link" href="search.html">Search</a></li>
+                        <li class='nav-item'><a class="nav-link" href="contact.html">ContactUs</a></li>
+
+                    </ul>
+                
+
+             
+                    <form class="form-inline ">
+                        <button class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#login">Login</button>
+                        <button class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#signupModal">SignUp</button>
+                    </form>
+                
+               
+            </div>
+        </nav>
+
+        <!--JUMBOTRON-->
+
+        <div class="jumbotron">
+            <h1 class="display-8">Find <e><em>YOUR</em></e> special planet <i class='fa fa-rocket' aria-hidden="true"></i></h1>
+            <p class="lead">That's one small step for man, one giant leap for mankind.</p>
+            <hr class="my-4"/>
+                <a class='btn btn-success col-2' href='search.html'>Godspeed</a>
+        </div>
+
+
+
+        <p id='latestdeals'>Latest Deals</p>
+        <hr class='my-4' >
+        
+
+         <!--Carousel-->
+         <div id="carouselExampleIndicators" class="carousel slide align-content-center" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                  <div class="carousel-item active">
+                    <a href=''><img class="d-block img-fluid" src="http://via.placeholder.com/1240x400" alt="First slide"/></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Mercury</h3>
+                        <p>Super faboulous planet</p>
+                        <small>Mercury is the closest planet to the Sun and due to its proximity it is not easily seen except during twilight. For every two orbits of the Sun, Mercury completes three rotations about its axis and up until 1965 it was thought that the same side of Mercury constantly faced the Sun. Thirteen times a century Mercury can be observed from the Earth passing across the face of the Sun in an event called a transit.</small>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <a href=''><img class="d-block img-fluid" src="http://via.placeholder.com/1240x400" alt="Second slide"/></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Earth</h3>
+                        <p>Too mainstream</p>
+                        <small>Earth is the third planet from the Sun and is the largest of the terrestrial planets. The Earth is the only planet in our solar system not to be named after a Greek or Roman deity. The Earth was formed approximately 4.54 billion years ago and is the only known planet to support life.</small>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <a href=''><img class="d-block img-fluid" src="http://via.placeholder.com/1240x400" alt="Third slide"/></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Venus</h3>
+                        <p>The Dealbreaker!</p>
+                        <small>Venus is the second planet from the Sun and is the second brightest object in the night sky after the Moon. Named after the Roman goddess of love and beauty, Venus is the second largest terrestrial planet and is sometimes referred to as the Earth’s sister planet due the their similar size and mass. The surface of the planet is obscured by an opaque layer of clouds made up of sulphuric acid.</small>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+        </div>
+
+        
+       
+        <!-- CONTENT / 3 cards  -->
+
+        <div class='container cards' id='testimonials' >
+            <hr class='my-2' style='width:0';>
+            <p style='color:white;'>Testimonials</p>
+            <hr class='my-6'>
+            <div class="card-deck">
+                <div class="card">
+                    <img class="card-img-top" src="http://via.placeholder.com/150x150" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">J'onn J'onzz</h4>
+                        <p class="card-text">At first I was not sure, but thanks to Nod.Space I managed to rent my planet and go to Earth on holidays. Thanks again!</p>
+                        <p class="card-text"><small class="text-muted">Renting his planet</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="http://via.placeholder.com/150x150" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Heather</h4>
+                        <p class="card-text">I have a good evalutation from Nod.Space and I have been able to get more money than expected! This site is great!</p>
+                        <p class="card-text"><small class="text-muted">Sold her planet</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="http://via.placeholder.com/150x150" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This
+                            card has even longer content than the first to show that equal height action.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <footer class='a' style='text-align:center;'>
+            <div class='row'>
+                <div class='col-6 my-2 offset-1'>
+                    <span class=''>2/50 Bridge St, Sydney, 2000, Australia</span>
+                </div>
+                <div class='col-2 my-2'>
+                    <span> 02.1111.2222 </span>
+                </div>
+                <div class='col-2 my-2'>
+                <span> <a href=''>Contact Us</a></span>
+                </div>
+            </div>
+            <hr class='my-1'>
+            <div class='row'>
+
+                <div class='col-3 offset-1'>
+                    <div class='row'>
+                        <div class='col-12'>
+                            <header>Our Social Media</header>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-6 my-2'>
+                                <a href=''><i class='fa fa-facebook fa-2x'></i></a>
+                        </div>
+                        <div class='col-6 my-2'>
+                                <a href=''><i class='fa fa-twitter fa-2x'></i></a>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-6 my-2'>
+                                <a href=''><i class='fa fa-linkedin fa-2x'></i></a>
+                        </div>
+                        <div class='col-6 my-2'>
+                            <a href=''><i class='fa fa-youtube fa-2x'></i></a>
+                        </div>
+                    </div>        
+                </div>
+
+                <div class='col-7'>
+                    <div class='row'>
+                        <div class='col-12'>
+                            <header>About Nod.Space</header>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-12'>
+                            <p style='text-align:justify'> Nod.Space is an online platform connecting people who wants to buy, rent or sell planets in the outerspace. All our resources are at your fingertips!
+                            No matter what you’re after, Nod has your planet property needs covered.</p>
+                        </div>
+                    </div>        
+                </div>
+                
+            </div>
+            <hr class='my-1'>
+            <div class='row'>
+                <div class='col-12'>
+                    <p> &copy;2017 - Ignacio Garcia Villanueva</p>
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

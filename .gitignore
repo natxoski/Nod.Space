@@ -1,0 +1,24 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# README.md from create-react-app
+/NodDynamic/README.md
+
+# dependencies
+/NodDynamic/node_modules
+
+# testing
+/NodDynamic/coverage
+
+# production
+/NodDynamic/build
+
+# misc
+/NodDynamic/.DS_Store
+/NodDynamic/.env.local
+/NodDynamic/.env.development.local
+/NodDynamic/.env.test.local
+/NodDynamic/.env.production.local
+
+/NodDynamic/npm-debug.log*
+/NodDynamic/yarn-debug.log*
+/NodDynamic/yarn-error.log*

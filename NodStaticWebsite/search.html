@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang='es'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <title>
+        Nod.Space - Planets on the fly
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <link rel='stylesheet formhelpers' href='./css/bootstrap-formhelpers.min.css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="./img/favicon-96x96.png">
+
+    <style>
+
+        
+
+        footer {
+            color: white;
+            background-color: #333333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='container'>
+        <!-- HEADER-->
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+            <a class="navbar-brand" href="./index.html">Nod.Space</a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+                <ul class='navbar-nav mr-auto'>
+
+                    <li class='nav-item'><a class="nav-link" href="./index.html#latestdeals">Latest Deals</a></li>
+                    <li class='nav-item'><a class="nav-link" href="./index.html#testimonials">Testimonials</a></li>
+                    <li class='nav-item'><a class="nav-link" href="./search.html">Search</a></li>
+                    <li class='nav-item'><a class="nav-link" href="./contact.html">ContactUs</a></li>
+
+                </ul>
+
+
+
+                <form class="form-inline ">
+                    <button class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#login">Login</button>
+                    <button class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#signupModal">SignUp</button>
+                </form>
+
+
+            </div>
+        </nav>
+
+        <!--SEARCH-->
+        <div class='container' style='margin:20px 0;'>
+            <div class='row'>
+                <div class='col-4'>
+                    <div class='container'>
+                        <form class="col-12">
+                            <div class='row'>
+                                <div class='col-12'>
+                                    <h5>Planet Filters</h5>
+                                </div>
+                            </div>
+                            <div class='row'>
+                                <div class='col-12'>
+                                    <div class="form-group">
+                                        <label for="optionSelect"></label>
+                                        <select name='optionSelect' class="form-control" id="optionSelect">
+                                            <option>Buy</option>  
+                                            <option>Rent</option>
+                                            <option>Sold</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class='row'>
+                                <div class='col-12'>
+                                    <label for="planetName"></label>
+                                    <input type='text' name='planetName' id="planetName" placeholder='Planet name?' />
+                                </div>
+                            </div>
+
+                            <div class='row'>
+                                <div class='col-12'>
+                                    <div class="form-group">
+                                        <label for="distOptionSelect"></label>
+                                        <select name='distOption' class="form-control" id="distOptionSelect">
+                                            <option>0-500M</option>  
+                                            <option>500M-1000M</option>
+                                            <option>1000M</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class='row'>
+                                <div class='col-12'>
+                                    <div class="form-group">
+                                        <label for="typeOptionSelect"></label>
+                                        <select name='typeOption' class="form-control" id="typeOptionSelect">
+                                            <option>Terrestrial</option>  
+                                            <option>Gas</option>
+                                            <option>Ice</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class='row'>
+                                <div class='col-12'>
+                                    <div class="form-group">
+                                        <label for="priceOptionSelect"></label>
+                                        <select name='priceOption' class="form-control" id="priceOptionSelect">
+                                            <option> <2M </option>  
+                                            <option> 2M-5M </option>
+                                            <option> >5M </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class='row'>
+
+                                <div class='col-6'>
+                                    <button class="btn btn-link float-left"> Clear form </button>
+                                </div>
+                                <div class='col-6'>
+                                        <input type="submit" class="btn btn-primary float-right" value="Submit" />
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                <div class='col-8 '>
+                    <div>
+                        <div class='row'>
+                            <h4 id='nPlanets' class='text-muted'></h4>
+                        </div>
+                        <div class='row'>
+                            <div class='card-deck'>
+                               <div id='search' class=''></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class='a' style='text-align:center;'>
+            <div class='row'>
+                <div class='col-6 my-2 offset-1'>
+                    <span class=''>2/50 Bridge St, Sydney, 2000, Australia</span>
+                </div>
+                <div class='col-2 my-2'>
+                    <span> 02.1111.2222 </span>
+                </div>
+                <div class='col-2 my-2'>
+                    <span> <a href=''>Contact Us</a></span>
+                </div>
+            </div>
+            <hr class='my-1'>
+            <div class='row'>
+
+                <div class='col-3 offset-1'>
+                    <div class='row'>
+                        <div class='col-12'>
+                            <header>Our Social Media</header>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-6 my-2'>
+                            <a href=''><i class='fa fa-facebook fa-2x'></i></a>
+                        </div>
+                        <div class='col-6 my-2'>
+                            <a href=''><i class='fa fa-twitter fa-2x'></i></a>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-6 my-2'>
+                            <a href=''><i class='fa fa-linkedin fa-2x'></i></a>
+                        </div>
+                        <div class='col-6 my-2'>
+                            <a href=''><i class='fa fa-youtube fa-2x'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='col-7'>
+                    <div class='row'>
+                        <div class='col-12'>
+                            <header>About Nod.Space</header>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-12'>
+                            <p style='text-align:justify'> Nod.Space is an online platform connecting people who wants to buy, rent or sell planets in the
+                                outerspace. All our resources are at your fingertips! No matter what you’re after, Nod has
+                                your planet property needs covered.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <hr class='my-1'>
+            <div class='row'>
+                <div class='col-12'>
+                    <p> &copy;2017 - Ignacio Garcia Villanueva</p>
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <script src='./js/bootstrap-formhelpers.min.js'></script>
+
+    <script>
+        $(document).ready(function(){
+
+
+        
+        
+        function _getPlanetsStatic (){
+            var  planetsList = [
+        {   
+            id:1,
+            name: 'Mercury',
+            meanDistanceFromSun:'57,909,175',
+            equatorialRadius:'2,439.64',
+            surfaceArea:'75,000,000',
+            volume:'6.083exp10', 
+            mass:'3.302x10^23',
+            img:'http://via.placeholder.com/640x480',
+            BuyRentSold:1,
+            type:'Terrestrial'
+        },
+        {
+            id:2,
+            name: 'Venus',
+            meanDistanceFromSun:'108,208,930',
+            equatorialRadius:'6051.59',
+            surfaceArea:'460,000,000',
+            volume:'9.28*10^11', 
+            mass:'4.8690*10^24',
+            img:'http://via.placeholder.com/640x480',
+            BuyRentSold:2,
+            type:'Terrestrial'
+        },    
+        {
+            id:3,
+            name: 'Earth',
+            meanDistanceFromSun:'149,597,890',
+            equatorialRadius:'6378.1',
+            surfaceArea:'510,000,000',
+            volume:'1.083*10^12', 
+            mass:'5.972*10^24',
+            img:'http://via.placeholder.com/640x480',
+            BuyRentSold:1,
+            type:'Terrestrial'
+        },  
+        {
+            id:4,
+            name: 'Mars',
+            meanDistanceFromSun:'227,936,640',
+            equatorialRadius:'3,397.00',
+            surfaceArea:'140,000,000',
+            volume:'1.6318*10^11', 
+            mass:'6.4191*10^23',
+            img:'http://via.placeholder.com/640x480',
+            BuyRentSold:0,
+            type:'Terrestrial'
+        },  
+        {
+            id:5,
+            name: 'Jupiter',
+            meanDistanceFromSun:'778,412,010',
+            equatorialRadius:'71,492.68',
+            surfaceArea:'64,000,000,000',
+            volume:'1.431*10^15', 
+            mass:'1.8987*10^27',
+            img:'http://via.placeholder.com/640x480',
+            BuyRentSold:0,
+            type:'Gas'
+        },
+        {
+            id:6,
+            name: 'Saturn',
+            meanDistanceFromSun:'1,426,725,400',
+            equatorialRadius:'60,267.14',
+            surfaceArea:'44,000,000,000',
+            volume:'8.27*10^14', 
+            mass:'5.6851*10^26',
+            img:'http://via.placeholder.com/640x480',
+            BuyRentSold:0,
+            type:'Gas'
+        },
+        {
+            id:7,
+            name: 'Uranus',
+            meanDistanceFromSun:'2,870,972,200',
+            equatorialRadius:'25,557.25',
+            surfaceArea:'8,100,000,000',
+            volume:'6.834*10^13', 
+            mass:'8.6849*10^25',
+            img:'http://via.placeholder.com/640x480',
+            BuyRentSold:1,
+            type:'Ice'
+        },
+        {
+            id:8,
+            name: 'Neptune',
+            meanDistanceFromSun:'4,498,252,900',
+            equatorialRadius:'24,766.36',
+            surfaceArea:'7,700,000,000',
+            volume:'6.254*10^13', 
+            mass:'1.0244*10^26',
+            img:'http://via.placeholder.com/640x480',
+            BuyRentSold:2,
+            type:'Ice'
+
+        }];
+
+            return planetsList;
+        }
+
+        planets=_getPlanetsStatic();
+        var planetsOutput="<div class='row'>";
+        for (var i=0; i<planets.length;i++){
+            planetsOutput+=
+            "<div class='card col-4' style='text-align:center;padding:0; marginLeft:0; margin-bottom:15px;'>"+
+                "<img class='card-img-top img-fluid' style='height:auto; max-width:100%;' src="+planets[i].img+ "alt='Planet image' />"+
+                "<div class='card-block'>"+
+                    "<h4 class='card-title'>"+planets[i].name+"</h4>"+
+                    "<p class='card-text'><small class='text-muted'>"+planets[i].meanDistanceFromSun+"</small></p>"+
+                "</div>"+
+            "</div>";
+        }
+        planetsOutput+="</div>";
+        var l = planets.length;
+         
+        var output='';
+        if (l===0){
+            output ='No planets found';
+        } else if (l===1){
+            output='1 planet found';
+        } else {
+            output=''+l+ ' planets found!';
+        }
+        $('#nPlanets').html(output);
+        $('#search').html(planetsOutput);
+
+        });
+
+    
+    </script>
+
+</body>
+
+</html>
